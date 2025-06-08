@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import Header from './Header';
+import { Helmet } from 'react-helmet';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
-import Address from './Address';
+import Address from './AddressPage';
 import '../assets/css/Cart.css';
 
 const Cart = () => {
@@ -34,7 +35,9 @@ const Cart = () => {
 
   return (
     <>
-
+      <Helmet>
+        <title>Cart/Grocery Store</title>
+      </Helmet>
       <div className="py-5 step-nav mt-5">
         <h2 className="cart-title mt-5">Cart</h2>
         <div className="steps">
@@ -55,13 +58,13 @@ const Cart = () => {
       <div className="cart-container mb-5">
         <div className="cart-items">
           {cartItems.length === 0 ? (
-            <p className="text-center">Your cart is empty.</p>
+            <p className="text-center fs-3">Your cart is empty.</p>
           ) : (
             cartItems.map((item) => (
               <div className="cart-card" key={item.id}>
                 <img src={item.image} alt={item.name} className="cart-img1" />
                 <div className="cart-details">
-                  {/* <p className="cat">Vegetables</p> */}
+                  <p className="cat">{item.category}</p>
                   <h3>{item.name.toUpperCase()}</h3>
                   <p>₹ {item.price}</p>
                 </div>

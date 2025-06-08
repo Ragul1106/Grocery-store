@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../assets/css/Auth.css';
 
 export default function Register() {
@@ -65,6 +66,9 @@ export default function Register() {
 
   return (
     <div className="auth-wrapper centered">
+      <Helmet>
+              <title>Register Page/Grocery Store</title>
+            </Helmet>
       <h2 className="text-center mt-3">Customer Registration</h2>
       <div className="form-area">
         <label>Full Name</label>

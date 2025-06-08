@@ -21,18 +21,21 @@ const allProducts = [
         src: veg1,
         name: 'Organic Onion',
         price: 120,
+        category: "Vegetables",
         description: 'Fresh organic onions packed with antioxidants and flavor, perfect for curries and salads.'
       },
       {
         src: veg2,
         name: 'Corn',
         price: 130,
+        category: "Vegetables",
         description: 'Zesty and mildly spicy red onions, ideal for salads and pickles.'
       },
       {
         src: veg8,
         name: 'Spring Onion',
         price: 100,
+        category: "Vegetables",
         description: 'Tender spring onions, great for garnishes and Chinese recipes.'
       },
     ]
@@ -44,18 +47,20 @@ const allProducts = [
         src: veg2,
         name: 'Carrot',
         price: 90,
+        category: "Vegetables",
         description: 'Sweet and crunchy carrots rich in vitamin A, ideal for salads and juices.'
       },
       {
         src: veg5,
         name: 'Baby Carrot',
         price: 100,
+        category: "Vegetables",
         description: 'Delicious and snackable baby carrots, great for kids and diet plans.'
       },
       {
         src: veg7,
         name: 'Organic Carrot',
-        price: 110,
+        price: 110, category: "Vegetables",
         description: 'Organic carrots grown without pesticides for a healthier lifestyle.'
       },
     ]
@@ -66,19 +71,19 @@ const allProducts = [
       {
         src: veg3,
         name: 'Garlic',
-        price: 350,
+        price: 350, category: "Vegetables",
         description: 'Aromatic and powerful garlic bulbs, essential in everyday Indian cooking.'
       },
       {
         src: veg6,
         name: 'Tomato',
-        price: 400,
+        price: 400, category: "Vegetables",
         description: 'Convenient ready-to-use peeled garlic for faster cooking.'
       },
       {
         src: veg2,
         name: 'Carrot',
-        price: 370,
+        price: 370, category: "Vegetables",
         description: 'Big, fresh cloves of garlic rich in flavor and aroma.'
       },
     ]
@@ -89,19 +94,19 @@ const allProducts = [
       {
         src: veg4,
         name: 'Corn',
-        price: 80,
+        price: 80, category: "Vegetables",
         description: 'Sweet corn perfect for boiling, roasting, or mixing in salads.'
       },
       {
         src: veg7,
         name: 'Beans',
-        price: 90,
+        price: 90, category: "Vegetables",
         description: 'Crunchy baby corn for Chinese cuisine and stir-fries.'
       },
       {
         src: veg5,
         name: 'Spinach',
-        price: 95,
+        price: 95, category: "Vegetables",
         description: 'Naturally grown corn with no chemical treatment.'
       },
     ]
@@ -112,19 +117,19 @@ const allProducts = [
       {
         src: veg5,
         name: 'Spinach',
-        price: 80,
+        price: 80, category: "Vegetables",
         description: 'Sweet corn perfect for boiling, roasting, or mixing in salads.'
       },
       {
         src: veg1,
         name: 'Onion',
-        price: 90,
+        price: 90, category: "Vegetables",
         description: 'Crunchy baby corn for Chinese cuisine and stir-fries.'
       },
       {
         src: veg7,
         name: 'Beans',
-        price: 95,
+        price: 95, category: "Vegetables",
         description: 'Naturally grown corn with no chemical treatment.'
       },
     ]
@@ -135,19 +140,19 @@ const allProducts = [
       {
         src: veg6,
         name: 'Tomato',
-        price: 80,
+        price: 80, category: "Vegetables",
         description: 'Sweet corn perfect for boiling, roasting, or mixing in salads.'
       },
       {
         src: veg3,
         name: 'Garlic',
-        price: 90,
+        price: 90, category: "Vegetables",
         description: 'Crunchy baby corn for Chinese cuisine and stir-fries.'
       },
       {
         src: veg1,
         name: 'Onion',
-        price: 95,
+        price: 95, category: "Vegetables",
         description: 'Naturally grown corn with no chemical treatment.'
       },
     ]
@@ -158,19 +163,19 @@ const allProducts = [
       {
         src: veg7,
         name: 'Beans',
-        price: 80,
+        price: 80, category: "Vegetables",
         description: 'Sweet corn perfect for boiling, roasting, or mixing in salads.'
       },
       {
         src: veg2,
         name: 'Carrot',
-        price: 90,
+        price: 90, category: "Vegetables",
         description: 'Crunchy baby corn for Chinese cuisine and stir-fries.'
       },
       {
         src: veg1,
         name: 'Organic Onion',
-        price: 95,
+        price: 95, category: "Vegetables",
         description: 'Naturally grown corn with no chemical treatment.'
       },
     ]
@@ -181,19 +186,19 @@ const allProducts = [
       {
         src: veg8,
         name: 'Beetroot',
-        price: 80,
+        price: 80, category: "Vegetables",
         description: 'Sweet corn perfect for boiling, roasting, or mixing in salads.'
       },
       {
         src: veg4,
         name: 'Baby Corn',
-        price: 90,
+        price: 90, category: "Vegetables",
         description: 'Crunchy baby corn for Chinese cuisine and stir-fries.'
       },
       {
         src: veg5,
         name: 'spinach',
-        price: 95,
+        price: 95, category: "Vegetables",
         description: 'Naturally grown corn with no chemical treatment.'
       },
     ]
@@ -215,19 +220,20 @@ const VegProductDetail = () => {
     }
   }, [productData]);
 
-   const handleAddToCart = () => {
-  if (selectedVariant) {
-    const cartItem = {
-      id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
-      name: selectedVariant.name,
-      price: selectedVariant.price,
-      image: selectedVariant.src, 
-      quantity,
-      weight,
-    };
-    addToCart(cartItem);
-  }
-};
+  const handleAddToCart = () => {
+    if (selectedVariant) {
+      const cartItem = {
+        id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
+        name: selectedVariant.name,
+        price: selectedVariant.price,
+        image: selectedVariant.src,
+        quantity,
+        weight,
+        category: selectedVariant.category,
+      };
+      addToCart(cartItem);
+    }
+  };
 
   if (!productData) {
     return (
@@ -300,15 +306,25 @@ const VegProductDetail = () => {
             <p><strong>TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</strong></p>
 
             <div className="d-flex align-items-center my-3">
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
-              >-</button>
-              <span className="mx-3 fw-bold">{quantity}</span>
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => setQuantity(prev => prev + 1)}
-              >+</button>
+              <div className="d-flex align-items-center justify-content-center my-3 gap-3">
+                <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
+                >-</button>
+
+                <span
+                  className="px-3 py-1 text-white rounded text-center fw-bold"
+                  style={{ minWidth: '40px',backgroundColor:"#4EB528" }}
+                >
+                  {quantity}
+                </span>
+
+                <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => prev + 1)}
+                >+</button>
+              </div>
+
             </div>
 
             <p><strong>Quantity: {weight}</strong></p>
@@ -339,8 +355,8 @@ const VegProductDetail = () => {
           </div>
         </div>
 
-        <div className='description mt-5 fs-5 fw-bold'> 
-          <h3 className="mb-3" style={{textDecoration:"underline"}}>DESCRIPTION</h3> 
+        <div className='description mt-5 fs-5 fw-bold'>
+          <h3 className="mb-3" style={{ textDecoration: "underline" }}>DESCRIPTION</h3>
           <p>{strawberryDescription.main}</p>
           <p>{strawberryDescription.detailed}</p>
 

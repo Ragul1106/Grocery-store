@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from './Header'; 
+import { Helmet } from 'react-helmet';
 import '../assets/css/document.css'; 
 
 const PrivacyPolicy = () => {
   return (
     <>
+    <Helmet>
+            <title>Privacy Policy/Grocery Store</title>
+          </Helmet>
       <Header /> 
       <div className="privacy-policy-container fs-3 fw-bold">
         <h1 className='fs-2 fw-bold'>PRIVACY POLICY</h1>

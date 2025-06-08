@@ -1,9 +1,13 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import BlogImage from "../assets/images/blog header image.png"; 
 
 const ReadMore = () => {
   return (
     <div className="container py-5" style={{marginTop:"100px"}}>
+      <Helmet>
+              <title>Readmore/Grocery Store</title>
+            </Helmet>
       <h2 className="text-center fs-1 fw-bold mb-4" style={{color:"#FF7C08"}}>Eco-Friendly Shopping Tips</h2>
 
       <p className="fs-3">

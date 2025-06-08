@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../assets/css/Payment.css';
 
@@ -12,6 +13,9 @@ const Payment = () => {
 
   return (
     <div className="payment-container mt-5 pt-md-5">
+      <Helmet>
+              <title>Payment/Grocery Store</title>
+            </Helmet>
       <div className="icon-circle">
         <i className="bi bi-check2-circle"></i>
       </div>

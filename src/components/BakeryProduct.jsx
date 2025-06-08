@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import Header from './Header';
-import '../assets/css/ProductDetails.css'; 
+import '../assets/css/ProductDetails.css';
 
 import bakery1 from '../assets/images/bakery cate 1.png';
 import bakery2 from '../assets/images/bakery cate 2.png';
@@ -21,18 +21,21 @@ const allProducts = [
         src: bakery1,
         name: 'Cookie',
         price: 150,
+        category: "Bakery",
         description: 'Crisp, juicy apples perfect for snacking or baking.'
       },
       {
         src: bakery2,
         name: 'Donut',
         price: 160,
+        category: "Bakery",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: bakery3,
         name: 'Sweet',
         price: 180,
+        category: "Bakery",
         description: 'Organically grown apples without synthetic chemicals.'
       },
     ]
@@ -42,20 +45,23 @@ const allProducts = [
     images: [
       {
         src: bakery2,
-        name: 'Banana',
+        name: 'Sweet2',
         price: 60,
+        category: "Bakery",
         description: 'Naturally sweet bananas rich in potassium and fiber.'
       },
       {
         src: bakery1,
         name: 'Red Banana',
         price: 75,
+        category: "Bakery",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: bakery7,
         name: 'Raw Banana',
         price: 50,
+        category: "Bakery",
         description: 'Starchy raw bananas used for savory dishes.'
       },
     ]
@@ -65,20 +71,23 @@ const allProducts = [
     images: [
       {
         src: bakery3,
-        name: 'Orange',
+        name: 'Sweet3',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery3,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery6,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -88,20 +97,23 @@ const allProducts = [
     images: [
       {
         src: bakery4,
-        name: 'Orange',
+        name: 'Sweet4',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery6,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery8,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -111,20 +123,23 @@ const allProducts = [
     images: [
       {
         src: bakery5,
-        name: 'Orange',
+        name: 'Sweet5',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery3,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery8,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -134,20 +149,23 @@ const allProducts = [
     images: [
       {
         src: bakery6,
-        name: 'Orange',
+        name: 'Sweet6',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery1,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery7,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -157,20 +175,23 @@ const allProducts = [
     images: [
       {
         src: bakery7,
-        name: 'Orange',
+        name: 'Sweet7',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery3,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery2,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -180,54 +201,57 @@ const allProducts = [
     images: [
       {
         src: bakery8,
-        name: 'Orange',
+        name: 'Swee8',
         price: 100,
+        category: "Bakery",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: bakery3,
         name: 'Tangerine',
         price: 110,
+        category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery5,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
   },
 ];
 
- const strawberryDescription = {
-    main: "Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and meals.",
-    detailed: "Here's a more detailed look at how strawberries might be described in a grocery store setting:",
-    appearance: [
-      "Color: Bright red, with variations depending on the variety.",
-      "Shape: Typically round or oval, with a smooth surface.",
-      "Seeds: The seeds are small, whitish or brownish specks that cover the surface of the fruit.",
-      "Freshness: Shiny, firm, and free from blemishes or mold."
-    ],
-    tasteAroma: [
-      "Flavor: Sweet and juicy, with a slightly tart or sour note in some varieties.",
-      "Aroma: A pleasant, fruity, and fragrant aroma."
-    ],
-    nutrition: [
-      "Vitamin C: Rich in vitamin C, an important antioxidant.",
-      "Fiber: A good source of fiber.",
-      "Other nutrients: Contains other vitamins, minerals, and antioxidants.",
-      "A healthy and low-calorie fruit."
-    ],
-    uses: [
-      "Fresh consumption: Enjoyed as a snack or added to salads, desserts, or smoothies.",
-      "Culinary applications: Used in jams, sauces, desserts, and other dishes."
-    ],
-    storage: [
-      "Refrigeration: Should be refrigerated to maintain freshness.",
-      "Humidity: Best stored in the refrigerator at high humidity."
-    ]
-  };
+const strawberryDescription = {
+  main: "Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and meals.",
+  detailed: "Here's a more detailed look at how strawberries might be described in a grocery store setting:",
+  appearance: [
+    "Color: Bright red, with variations depending on the variety.",
+    "Shape: Typically round or oval, with a smooth surface.",
+    "Seeds: The seeds are small, whitish or brownish specks that cover the surface of the fruit.",
+    "Freshness: Shiny, firm, and free from blemishes or mold."
+  ],
+  tasteAroma: [
+    "Flavor: Sweet and juicy, with a slightly tart or sour note in some varieties.",
+    "Aroma: A pleasant, fruity, and fragrant aroma."
+  ],
+  nutrition: [
+    "Vitamin C: Rich in vitamin C, an important antioxidant.",
+    "Fiber: A good source of fiber.",
+    "Other nutrients: Contains other vitamins, minerals, and antioxidants.",
+    "A healthy and low-calorie fruit."
+  ],
+  uses: [
+    "Fresh consumption: Enjoyed as a snack or added to salads, desserts, or smoothies.",
+    "Culinary applications: Used in jams, sauces, desserts, and other dishes."
+  ],
+  storage: [
+    "Refrigeration: Should be refrigerated to maintain freshness.",
+    "Humidity: Best stored in the refrigerator at high humidity."
+  ]
+};
 
 const BakeryProduct = () => {
   const { productId } = useParams();
@@ -244,19 +268,20 @@ const BakeryProduct = () => {
     }
   }, [productData]);
 
-    const handleAddToCart = () => {
-  if (selectedVariant) {
-    const cartItem = {
-      id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
-      name: selectedVariant.name,
-      price: selectedVariant.price,
-      image: selectedVariant.src, 
-      quantity,
-      weight,
-    };
-    addToCart(cartItem);
-  }
-};
+  const handleAddToCart = () => {
+    if (selectedVariant) {
+      const cartItem = {
+        id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
+        name: selectedVariant.name,
+        price: selectedVariant.price,
+        image: selectedVariant.src,
+        quantity,
+        weight,
+        category: selectedVariant.category
+      };
+      addToCart(cartItem);
+    }
+  };
 
   if (!productData) {
     return (
@@ -299,18 +324,24 @@ const BakeryProduct = () => {
             <h4>₹ {selectedVariant?.price}</h4>
             <p><strong>TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</strong></p>
 
-            <div className="d-flex align-items-center my-3">
+            <div className="d-flex align-items-center justify-content-center my-3 gap-3">
               <button
-                className="btn btn-outline-secondary"
+                className="btn border-0 shadow-none"
                 onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
               >-</button>
-              <span className="mx-3 fw-bold">{quantity}</span>
+
+              <span
+                className="px-3 py-1 text-white rounded text-center fw-bold"
+                style={{ minWidth: '40px',backgroundColor:"#4EB528" }}
+              >
+                {quantity}
+              </span>
+
               <button
-                className="btn btn-outline-secondary"
+                className="btn border-0 shadow-none"
                 onClick={() => setQuantity(prev => prev + 1)}
               >+</button>
             </div>
-
             <p><strong>Quantity: {weight}</strong></p>
             <div className="mb-3">
               {['250g', '500g', '1kg'].map(w => (
@@ -339,8 +370,8 @@ const BakeryProduct = () => {
           </div>
         </div>
 
-        <div className='description mt-5 fs-5 fw-bold'> 
-          <h3 className="mb-3" style={{textDecoration:"underline"}}>DESCRIPTION</h3> 
+        <div className='description mt-5 fs-5 fw-bold'>
+          <h3 className="mb-3" style={{ textDecoration: "underline" }}>DESCRIPTION</h3>
           <p>{strawberryDescription.main}</p>
           <p>{strawberryDescription.detailed}</p>
 
@@ -379,7 +410,7 @@ const BakeryProduct = () => {
             ))}
           </ul>
         </div>
-        
+
       </div>
     </>
   );

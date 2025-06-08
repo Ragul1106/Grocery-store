@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import '../assets/css/HomePage.css';
 import { CartContext } from "./CartContext";
 import { Card, Row, Col, Button } from "react-bootstrap";
@@ -47,6 +46,11 @@ import reviewUser from '../assets/images/review image.png';
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState("New Arrivals");
   const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
+
+    useEffect(() => {
+    document.title = "Home/Groceries store";
+},[]);
 
   const products = [
     { id: 1, name: "Organic Tomatos", price: 80, rating: 5, image: organicTomatoes, path: "/vegetable" },
@@ -128,7 +132,10 @@ const HomePage = () => {
                   grains, and lean proteins, play a crucial role in nourishing
                   our bodies and promoting overall well-being
                 </p>
-                <button className="btn btn-warning fw-bold">Shop Now</button>
+                <button className="btn text-light fw-bold" style={{backgroundColor:"#FF7C08"}} onClick={() => navigate('/category')}>
+                  Shop Now
+                </button>
+
               </div>
             </div>
           </div>
@@ -148,7 +155,9 @@ const HomePage = () => {
                   <br />
                   To 50% Off
                 </h4>
-                <button className="btn btn-warning fw-bold">Shop Now</button>
+                <button className="btn text-light fw-bold" style={{backgroundColor:"#FF7C08"}} onClick={() => navigate('/category')}>
+                  Shop Now
+                </button>
               </div>
             </div>
           </div>
@@ -213,7 +222,7 @@ const HomePage = () => {
         <div className="featured-products container py-5">
           <div className="text-center mb-5">
             <h2 className="fw-bold mb-3">Featured Products</h2>
-            <p className="text-muted fs-5">
+            <p className="text-black fs-3">
               Each item is carefully selected for quality, freshness, and
               nutritional benefits.
             </p>
@@ -276,8 +285,6 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-
-
         </div>
 
         <div className="container product-category">
@@ -422,6 +429,12 @@ const HomePage = () => {
         </div>
 
         <div className="container bg-light py-5">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold mb-3">Our Customer Feedback</h2>
+            <p className="text-black fs-3">
+              We value the opinions of our customer that brings improvement in our services
+            </p>
+          </div>
           <div className="container">
             <div className="row align-items-center">
 

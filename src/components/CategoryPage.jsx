@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header from './Header';
 import '../assets/css/Category.css';
 
@@ -29,28 +30,34 @@ const Category = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Category/Grocery Store</title>
+      </Helmet>
+
+
+
       <Header />
       <main className='category'>
         <div className="container mt-5 pt-5">
-        <h2 className="text-center mb-4">Shop by Category</h2>
-        <div className="row">
-          {categories.map((cat, index) => (
-            <div
-              className="col-6 col-md-3 mb-4 text-center"
-              key={index}
-              onClick={() => navigate(cat.path)}
-              style={{ cursor: 'pointer' }}
-            >
-              <img
-                src={cat.image}
-                alt={cat.name}
-                className="img-fluid rounded category-img"
-              />
-              <h6 className="mt-2">{cat.name}</h6>
-            </div>
-          ))}
+          <h2 className="text-center mb-4">Shop by Category</h2>
+          <div className="row">
+            {categories.map((cat, index) => (
+              <div
+                className="col-6 col-md-3 mb-4 text-center"
+                key={index}
+                onClick={() => navigate(cat.path)}
+                style={{ cursor: 'pointer' }}
+              >
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  className="img-fluid rounded category-img"
+                />
+                <h6 className="mt-2">{cat.name}</h6>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
       </main>
     </>
   );

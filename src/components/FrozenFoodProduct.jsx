@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import Header from './Header';
-import '../assets/css/ProductDetails.css'; 
+import '../assets/css/ProductDetails.css';
 
 import frozen1 from '../assets/images/frozen cate 1.png';
 import frozen2 from '../assets/images/frozen cate 2.png';
@@ -21,18 +21,21 @@ const allProducts = [
         src: frozen1,
         name: 'Frezzed Apple',
         price: 150,
+        category: "Frozen Food",
         description: 'Crisp, juicy apples perfect for snacking or baking.'
       },
       {
         src: frozen2,
         name: 'Green Apple',
         price: 160,
+        category: "Frozen Food",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: frozen3,
         name: 'Organic Apple',
         price: 180,
+        category: "Frozen Food",
         description: 'Organically grown apples without synthetic chemicals.'
       },
     ]
@@ -44,18 +47,21 @@ const allProducts = [
         src: frozen2,
         name: 'Mango Ice',
         price: 60,
+        category: "Frozen Food",
         description: 'Naturally sweet bananas rich in potassium and fiber.'
       },
       {
         src: frozen5,
         name: 'Red Banana',
         price: 75,
+        category: "Frozen Food",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: frozen7,
         name: 'Raw Banana',
         price: 50,
+        category: "Frozen Food",
         description: 'Starchy raw bananas used for savory dishes.'
       },
     ]
@@ -67,18 +73,21 @@ const allProducts = [
         src: frozen3,
         name: 'Ice Cream 2',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen7,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen6,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -90,18 +99,21 @@ const allProducts = [
         src: frozen4,
         name: 'Mutton',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen6,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen8,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -113,18 +125,21 @@ const allProducts = [
         src: frozen5,
         name: 'Freezed Fish',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen3,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen8,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -136,18 +151,21 @@ const allProducts = [
         src: frozen6,
         name: 'Mango Cream',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen1,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen7,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -159,18 +177,21 @@ const allProducts = [
         src: frozen7,
         name: 'Ice Bar',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen3,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen2,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -182,52 +203,55 @@ const allProducts = [
         src: frozen8,
         name: 'Cone Ice Cream',
         price: 100,
+        category: "Frozen Food",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: frozen3,
         name: 'Tangerine',
         price: 110,
+        category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen5,
         name: 'Mandarin Orange',
         price: 115,
+        category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
   },
 ];
 
- const strawberryDescription = {
-    main: "Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and meals.",
-    detailed: "Here's a more detailed look at how strawberries might be described in a grocery store setting:",
-    appearance: [
-      "Color: Bright red, with variations depending on the variety.",
-      "Shape: Typically round or oval, with a smooth surface.",
-      "Seeds: The seeds are small, whitish or brownish specks that cover the surface of the fruit.",
-      "Freshness: Shiny, firm, and free from blemishes or mold."
-    ],
-    tasteAroma: [
-      "Flavor: Sweet and juicy, with a slightly tart or sour note in some varieties.",
-      "Aroma: A pleasant, fruity, and fragrant aroma."
-    ],
-    nutrition: [
-      "Vitamin C: Rich in vitamin C, an important antioxidant.",
-      "Fiber: A good source of fiber.",
-      "Other nutrients: Contains other vitamins, minerals, and antioxidants.",
-      "A healthy and low-calorie fruit."
-    ],
-    uses: [
-      "Fresh consumption: Enjoyed as a snack or added to salads, desserts, or smoothies.",
-      "Culinary applications: Used in jams, sauces, desserts, and other dishes."
-    ],
-    storage: [
-      "Refrigeration: Should be refrigerated to maintain freshness.",
-      "Humidity: Best stored in the refrigerator at high humidity."
-    ]
-  };
+const strawberryDescription = {
+  main: "Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and meals.",
+  detailed: "Here's a more detailed look at how strawberries might be described in a grocery store setting:",
+  appearance: [
+    "Color: Bright red, with variations depending on the variety.",
+    "Shape: Typically round or oval, with a smooth surface.",
+    "Seeds: The seeds are small, whitish or brownish specks that cover the surface of the fruit.",
+    "Freshness: Shiny, firm, and free from blemishes or mold."
+  ],
+  tasteAroma: [
+    "Flavor: Sweet and juicy, with a slightly tart or sour note in some varieties.",
+    "Aroma: A pleasant, fruity, and fragrant aroma."
+  ],
+  nutrition: [
+    "Vitamin C: Rich in vitamin C, an important antioxidant.",
+    "Fiber: A good source of fiber.",
+    "Other nutrients: Contains other vitamins, minerals, and antioxidants.",
+    "A healthy and low-calorie fruit."
+  ],
+  uses: [
+    "Fresh consumption: Enjoyed as a snack or added to salads, desserts, or smoothies.",
+    "Culinary applications: Used in jams, sauces, desserts, and other dishes."
+  ],
+  storage: [
+    "Refrigeration: Should be refrigerated to maintain freshness.",
+    "Humidity: Best stored in the refrigerator at high humidity."
+  ]
+};
 
 const FruitProduct = () => {
   const { productId } = useParams();
@@ -244,19 +268,19 @@ const FruitProduct = () => {
     }
   }, [productData]);
 
-    const handleAddToCart = () => {
-  if (selectedVariant) {
-    const cartItem = {
-      id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
-      name: selectedVariant.name,
-      price: selectedVariant.price,
-      image: selectedVariant.src, 
-      quantity,
-      weight,
-    };
-    addToCart(cartItem);
-  }
-};
+  const handleAddToCart = () => {
+    if (selectedVariant) {
+      const cartItem = {
+        id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
+        name: selectedVariant.name,
+        price: selectedVariant.price,
+        image: selectedVariant.src,
+        quantity,
+        weight,
+      };
+      addToCart(cartItem);
+    }
+  };
 
   if (!productData) {
     return (
@@ -300,15 +324,24 @@ const FruitProduct = () => {
             <p><strong>TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</strong></p>
 
             <div className="d-flex align-items-center my-3">
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
-              >-</button>
-              <span className="mx-3 fw-bold">{quantity}</span>
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => setQuantity(prev => prev + 1)}
-              >+</button>
+              <div className="d-flex align-items-center justify-content-center my-3 gap-3">
+                <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
+                >-</button>
+
+                <span
+                  className="px-3 py-1 text-white rounded text-center fw-bold"
+                  style={{ minWidth: '40px',backgroundColor:"#4EB528" }}
+                >
+                  {quantity}
+                </span>
+
+                <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => prev + 1)}
+                >+</button>
+              </div>
             </div>
 
             <p><strong>Quantity: {weight}</strong></p>
@@ -339,8 +372,8 @@ const FruitProduct = () => {
           </div>
         </div>
 
-        <div className='description mt-5 fs-5 fw-bold'> 
-          <h3 className="mb-3" style={{textDecoration:"underline"}}>DESCRIPTION</h3> 
+        <div className='description mt-5 fs-5 fw-bold'>
+          <h3 className="mb-3" style={{ textDecoration: "underline" }}>DESCRIPTION</h3>
           <p>{strawberryDescription.main}</p>
           <p>{strawberryDescription.detailed}</p>
 
@@ -379,7 +412,7 @@ const FruitProduct = () => {
             ))}
           </ul>
         </div>
-        
+
       </div>
     </>
   );

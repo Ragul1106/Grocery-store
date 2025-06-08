@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../assets/css/Auth.css';
 
 export default function Login() {
@@ -30,6 +31,9 @@ export default function Login() {
 
   return (
     <div className="auth-wrapper centered">
+      <Helmet>
+              <title>Login/Grocery Store</title>
+            </Helmet>
       <h2 className="text-center mt-3">Customer Log In</h2>
       <div className="form-area">
         <label>Email Address</label>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 import "../assets/css/blog.css";
 import articleImage from "../assets/images/blog header image.png";
 import blog1 from "../assets/images/blog 1.png";
@@ -57,8 +58,11 @@ const articles = [
 
 const Blogs = () => {
     return (
-        <div className="container py-5">
 
+        <div className="container py-5">
+            <Helmet>
+                <title>Blogs/Grocery Store</title>
+            </Helmet>
             <div className="featured-article-wrapper d-flex flex-column flex-md-row gap-4 p-4 bg-light mb-5">
                 <div className="article-card shadow-sm rounded-4 p-3 bg-white flex-fill">
                     <div className="position-relative">

@@ -42,17 +42,6 @@ footer {
   z-index: 500;
 }
 
-.contact-left::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -60px;
-  width: 80px;
-  height: 100%;
-  background-color: #0a1f44;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-}
-
 .contact-left h2 {
   margin: 0;
   font-size: 24px;
@@ -177,7 +166,7 @@ footer {
   background-color: #0a1f44;
   padding: 10px 40px;
   position: relative;
- clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
   overflow: hidden;
   height: 65px; 
   width: 150px;
@@ -193,14 +182,30 @@ footer {
   }
 
   .contact-left {
-    clip-path: none;
-    text-align: center;
-    padding: 20px;
-  }
+  position: relative;
+  background-color: #FF7C08;
+  padding: 10px 40px;
+  flex: 1;
+  position: relative;
+  clip-path: polygon(0 0, 80% 1%, 100% 100%, 0% 100%);
+  overflow: hidden;
+  z-index: 500;
+}
 
-  .contact-left::after {
-    display: none;
-  }
+.small-slant-box {
+  position: absolute;
+  top:19px;
+  background-color: #0a1f44;
+  padding: 10px 40px;
+  position: relative;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+  height: 65px; 
+  width: 150px;
+  margin-left: -85px;
+  z-index: 200;
+  
+}
 
   .info-right {
     flex-direction: column;

@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from './Header';
+import { Helmet } from 'react-helmet';
 import '../assets/css/document.css'; 
 
 const TermsAndConditions = () => {
   return (
     <>
+    <Helmet>
+            <title>Terms&Conditions/Grocery Store</title>
+          </Helmet>
       <Header /> 
       <div className="terms-conditions-container fs-4 fw-bold">
         {/* <h1 className='fs-2 fw-bold'>Terms & Conditions</h1> */}

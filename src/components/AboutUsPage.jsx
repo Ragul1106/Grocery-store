@@ -1,11 +1,19 @@
 import React from 'react';
-import Header from './Header'; 
-import '../assets/css/document.css'; 
+import Header from './Header';
+import { Helmet } from 'react-helmet';
+
+import '../assets/css/document.css';
 
 const AboutUs = () => {
   return (
     <>
-      <Header /> 
+        <Helmet>
+          <title>Your Cart | Grocery Store</title>
+        </Helmet>
+        
+      
+
+      <Header />
       <div className="about-us-container fs-4 fw-bold">
         {/* <h1 className="text-start mb-4">ABOUT US</h1> */}
         <p className="text-start">GROCERY AT DOORSTEP</p>
