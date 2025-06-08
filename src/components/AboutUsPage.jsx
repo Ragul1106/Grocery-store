@@ -11,8 +11,6 @@ const AboutUs = () => {
           <title>Your Cart | Grocery Store</title>
         </Helmet>
         
-      
-
       <Header />
       <div className="about-us-container fs-4 fw-bold">
         {/* <h1 className="text-start mb-4">ABOUT US</h1> */}
