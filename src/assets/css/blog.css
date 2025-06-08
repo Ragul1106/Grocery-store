@@ -1,0 +1,21 @@
+.featured-article-wrapper {
+  background-color: #f8f9fa; 
+  margin-top: 100px;
+}
+
+.article-card .badge {
+  font-size: 0.75rem;
+  background-color: #e8f5e9;
+  color: #4EB528;
+}
+
+.quick-prefix h6 {
+  font-size: 1rem;
+  /* margin-right: 20px; */
+  
+}
+
+.quick-prefix ol {
+  padding-left: 1.2rem;
+  /* margin-right: 20px; */
+}

@@ -1,0 +1,102 @@
+
+.container-fluid {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.form-range {
+  accent-color: #4EB528;
+}
+.form-select{
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+.badge {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-top: 5px;
+}
+
+h3.text-success {
+  font-weight: bold;
+}
+
+.dropdown-toggle {
+  min-width: 180px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-success {
+  background-color: #4EB528;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #4EB528;
+}
+
+.text-warning .bi-star-fill {
+  font-size: 1rem;
+  margin-right: 2px;
+}
+.range-container {
+  width: 100%;
+  position: relative;
+  height: 40px;
+}
+
+.price-tag {
+  font-size: 14px;
+  background-color: #4EB528 !important;
+}
+
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #cfe9d5; 
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background: #4EB528;
+  border-radius: 50%;
+  margin-top: -6px;
+  cursor: pointer;
+  border: 2px solid white;
+}

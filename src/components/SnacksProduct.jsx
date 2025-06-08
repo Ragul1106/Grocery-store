@@ -1,0 +1,386 @@
+import React, { useContext, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { CartContext } from './CartContext';
+import Header from './Header';
+import '../assets/css/ProductDetails.css'; 
+
+import Snack1 from '../assets/images/Snack cate 1.png';
+import Snack2 from '../assets/images/Snack cate 2.png';
+import Snack3 from '../assets/images/Snack cate 3.png';
+import Snack4 from '../assets/images/Snack cate 4.png';
+import Snack5 from '../assets/images/Snack cate 5.png';
+import Snack6 from '../assets/images/Snack cate 6.png';
+import Snack7 from '../assets/images/Snack cate 7.png';
+import Snack8 from '../assets/images/Snack cate 8.png';
+
+const allProducts = [
+  {
+    id: 'snack1',
+    images: [
+      {
+        src: Snack1,
+        name: 'Apple',
+        price: 150,
+        description: 'Crisp, juicy apples perfect for snacking or baking.'
+      },
+      {
+        src: Snack2,
+        name: 'Green Apple',
+        price: 160,
+        description: 'Tangy green apples, great for salads and detox.'
+      },
+      {
+        src: Snack3,
+        name: 'Organic Apple',
+        price: 180,
+        description: 'Organically grown apples without synthetic chemicals.'
+      },
+    ]
+  },
+  {
+    id: 'snack2',
+    images: [
+      {
+        src: Snack2,
+        name: 'Banana',
+        price: 60,
+        description: 'Naturally sweet bananas rich in potassium and fiber.'
+      },
+      {
+        src: Snack1,
+        name: 'Red Banana',
+        price: 75,
+        description: 'Unique red bananas with a sweet and creamy taste.'
+      },
+      {
+        src: Snack7,
+        name: 'Raw Banana',
+        price: 50,
+        description: 'Starchy raw bananas used for savory dishes.'
+      },
+    ]
+  },
+  {
+    id: 'snack3',
+    images: [
+      {
+        src: Snack3,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack3,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack6,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+  {
+    id: 'snack4',
+    images: [
+      {
+        src: Snack4,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack6,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack8,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+  {
+    id: 'snack5',
+    images: [
+      {
+        src: Snack5,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack3,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack8,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+  {
+    id: 'snack6',
+    images: [
+      {
+        src: Snack6,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack1,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack7,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+  {
+    id: 'snack7',
+    images: [
+      {
+        src: Snack7,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack3,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack2,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+  {
+    id: 'snack8',
+    images: [
+      {
+        src: Snack8,
+        name: 'Orange',
+        price: 100,
+        description: 'Juicy oranges full of Vitamin C and flavor.'
+      },
+      {
+        src: Snack3,
+        name: 'Tangerine',
+        price: 110,
+        description: 'Small and easy-to-peel tangerines with a sweet taste.'
+      },
+      {
+        src: Snack5,
+        name: 'Mandarin Orange',
+        price: 115,
+        description: 'Mandarins are sweeter and less acidic than regular oranges.'
+      },
+    ]
+  },
+];
+ const strawberryDescription = {
+    main: "Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and meals.",
+    detailed: "Here's a more detailed look at how strawberries might be described in a grocery store setting:",
+    appearance: [
+      "Color: Bright red, with variations depending on the variety.",
+      "Shape: Typically round or oval, with a smooth surface.",
+      "Seeds: The seeds are small, whitish or brownish specks that cover the surface of the fruit.",
+      "Freshness: Shiny, firm, and free from blemishes or mold."
+    ],
+    tasteAroma: [
+      "Flavor: Sweet and juicy, with a slightly tart or sour note in some varieties.",
+      "Aroma: A pleasant, fruity, and fragrant aroma."
+    ],
+    nutrition: [
+      "Vitamin C: Rich in vitamin C, an important antioxidant.",
+      "Fiber: A good source of fiber.",
+      "Other nutrients: Contains other vitamins, minerals, and antioxidants.",
+      "A healthy and low-calorie fruit."
+    ],
+    uses: [
+      "Fresh consumption: Enjoyed as a snack or added to salads, desserts, or smoothies.",
+      "Culinary applications: Used in jams, sauces, desserts, and other dishes."
+    ],
+    storage: [
+      "Refrigeration: Should be refrigerated to maintain freshness.",
+      "Humidity: Best stored in the refrigerator at high humidity."
+    ]
+  };
+
+const FruitProduct = () => {
+  const { productId } = useParams();
+  const { addToCart } = useContext(CartContext);
+
+  const productData = allProducts.find(p => p.id === productId);
+  const [selectedVariant, setSelectedVariant] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [weight, setWeight] = useState('250g');
+
+  useEffect(() => {
+    if (productData) {
+      setSelectedVariant(productData.images[0]);
+    }
+  }, [productData]);
+
+    const handleAddToCart = () => {
+  if (selectedVariant) {
+    const cartItem = {
+      id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
+      name: selectedVariant.name,
+      price: selectedVariant.price,
+      image: selectedVariant.src, 
+      quantity,
+      weight,
+    };
+    addToCart(cartItem);
+  }
+};
+
+  if (!productData) {
+    return (
+      <>
+        <Header />
+        <div className="container py-5">
+          <h3>Product not found.</h3>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Header />
+      <div className="container-fluid py-5 image-content">
+        <div className="row">
+          <div className="col-md-6">
+            <img
+              src={selectedVariant?.src}
+              className="img-fluid rounded main-product-image"
+              alt="Product"
+            />
+            <div className="d-flex mt-3 gap-2 image-size">
+              {productData.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img.src}
+                  alt={`Thumbnail ${idx}`}
+                  className="img-thumbnail small-thumb"
+                  onClick={() => setSelectedVariant(img)}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="col-md-6 fs-5 fw-bold">
+            <h3>{selectedVariant?.name}</h3>
+            <p>{selectedVariant?.description}</p>
+            <h4>₹ {selectedVariant?.price}</h4>
+            <p><strong>TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</strong></p>
+
+            <div className="d-flex align-items-center my-3">
+              <button
+                className="btn btn-outline-secondary"
+                onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
+              >-</button>
+              <span className="mx-3 fw-bold">{quantity}</span>
+              <button
+                className="btn btn-outline-secondary"
+                onClick={() => setQuantity(prev => prev + 1)}
+              >+</button>
+            </div>
+
+            <p><strong>Quantity: {weight}</strong></p>
+            <div className="mb-3">
+              {['250g', '500g', '1kg'].map(w => (
+                <label key={w} className="me-3">
+                  <input
+                    type="radio"
+                    name="weight"
+                    value={w}
+                    checked={weight === w}
+                    onChange={() => setWeight(w)}
+                  />{' '}
+                  {w}
+                </label>
+              ))}
+            </div>
+
+            <button className="btn btn-success mb-3" onClick={handleAddToCart}>
+              Add to Cart
+            </button>
+
+            <div>
+              <p><i className="bi bi-truck"></i> Free shipping on all orders over ₹450</p>
+              <p><i className="bi bi-clock-history"></i> Delivery in 3–4 working days</p>
+              <p className="text-success">Free delivery and return policies</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className='description mt-5 fs-5 fw-bold'> 
+          <h3 className="mb-3" style={{textDecoration:"underline"}}>DESCRIPTION</h3> 
+          <p>{strawberryDescription.main}</p>
+          <p>{strawberryDescription.detailed}</p>
+
+          <h5 className='fs-5 fw-bold'>Appearance:</h5>
+          <ul>
+            {strawberryDescription.appearance.map((item, index) => (
+              <li key={`appearance-${index}`}>{item}</li>
+            ))}
+          </ul>
+
+          <h5 className='fs-5 fw-bold'>Taste and Aroma:</h5>
+          <ul>
+            {strawberryDescription.tasteAroma.map((item, index) => (
+              <li key={`taste-${index}`}>{item}</li>
+            ))}
+          </ul>
+
+          <h5 className='fs-5 fw-bold'>Nutrition:</h5>
+          <ul>
+            {strawberryDescription.nutrition.map((item, index) => (
+              <li key={`nutrition-${index}`}>{item}</li>
+            ))}
+          </ul>
+
+          <h5 className='fs-5 fw-bold'>Uses:</h5>
+          <ul>
+            {strawberryDescription.uses.map((item, index) => (
+              <li key={`uses-${index}`}>{item}</li>
+            ))}
+          </ul>
+
+          <h5>Storage:</h5>
+          <ul>
+            {strawberryDescription.storage.map((item, index) => (
+              <li key={`storage-${index}`}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FruitProduct;
