@@ -107,10 +107,7 @@
 .nav-link.active {
   color: #4EB528 !important; 
   font-weight: bold;
-  border-bottom: 2px solid #4EB528;
 }
-
-
 
 .btn-success.account-btn {
   background-color: #4EB528;
@@ -156,6 +153,17 @@
   margin-bottom: 10px;
 }
 
+.logout-btn {
+  background-color: green;
+  color: white;
+  height: auto;
+  font-weight: bold;
+}
+.logout-btn:hover {
+  background-color: green;
+  font-weight: bold;
+  color: burlywood;
+}
 @media (max-width: 425px) {
   .mobile-toggle-btn {
     display: block;

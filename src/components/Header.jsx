@@ -125,7 +125,7 @@ const Header = () => {
   if (product) {
     navigate(`${product.path}/${product.id}`);
   } else {
-    alert("Product not found");}
+    alert("Product not found");}
 };
 
 
@@ -252,9 +252,9 @@ const Header = () => {
                         >
                           My Account
                         </button>
-                        <ul className="dropdown-menu">
+                        <ul className="dropdown-menu" style={{backgroundColor:"green"}}>
                           <li>
-                            <button className="dropdown-item" onClick={handleLogout}>
+                            <button className="dropdown-item logout-btn" onClick={handleLogout}>
                               Logout
                             </button>
                           </li>

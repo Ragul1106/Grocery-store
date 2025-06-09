@@ -394,7 +394,7 @@ const HomePage = () => {
           </div>
 
 
-          <div className="container position-relative bestdeal-product" style={{ marginTop: "-50px", zIndex: 2 }}>
+          <div className="container position-relative bestdeal-product" style={{ marginTop: "-120px", zIndex: 2 }}>
 
             <div className="row g-4">
               {products_bestdeals.map((product) => (
@@ -403,7 +403,7 @@ const HomePage = () => {
                     to={`/best-deals/${product.id}`}
                     className="text-decoration-none text-dark"
                   >
-                    <div className="product-card h-100 d-flex flex-column border-0 shadow-sm rounded-3 overflow-hidden">
+                    <div className="product-card mt-5 d-flex flex-column border-0 shadow-sm rounded-3 overflow-hidden">
                       <div className="product-image-container overflow-hidden d-flex align-items-center justify-content-center">
                         <img
                           src={product.image}

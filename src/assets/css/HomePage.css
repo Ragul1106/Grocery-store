@@ -136,6 +136,7 @@
 .product-card {
   transition: all 0.3s ease;
    background-color: white;
+   height: 330px;
 }
 
 .product-card:hover {
@@ -149,8 +150,8 @@
 }
 
 .product-image {
-  margin-top: 100px;
-  max-height: 400px;
+  margin-top: 50px;
+  max-height: 500px;
   width: 100%;
   object-fit: cover;
   padding: 20px;
