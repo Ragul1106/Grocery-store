@@ -6,7 +6,7 @@ import HomePage from './components/HomePage';
 import { CartProvider } from './components/CartContext';
 import Cart from './components/CartPage';
 import Category from './components/CategoryPage';
-
+import './index.css';
 import Fruits from './components/FruitsPage';
 import Vegetable from './components/VegetablePage';
 import DairyEggs from './components/DairyEggsPage';
