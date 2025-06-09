@@ -394,37 +394,67 @@ const HomePage = () => {
           </div>
 
 
-          <div
-            className="container position-relative bestdeal-product"
-            style={{ marginTop: "-50px", zIndex: 2 }}
-          >
-            <div className="row procuct-row g-0 ms-lg-5">
+          <div className="container position-relative bestdeal-product" style={{ marginTop: "-50px", zIndex: 2 }}>
+
+            <div className="row g-4">
               {products_bestdeals.map((product) => (
-                <div className="col-12 col-sm-6 col-lg-3" key={product.id}>
-                  <div className="card text-center product-card3 shadow-sm">
-                    <img
-                      src={product.image}
-                      className="card-img-top"
-                      alt={product.name}
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title">{product.name}</h5>
-                      <h4>₹ {product.price}</h4>
-                      <div className="text-warning mb-3">
-                        {"★".repeat(product.rating)}
-                        {"☆".repeat(5 - product.rating)}
+                <div key={product.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <Link
+                    to={`/best-deals/${product.id}`}
+                    className="text-decoration-none text-dark"
+                  >
+                    <div className="product-card h-100 d-flex flex-column border-0 shadow-sm rounded-3 overflow-hidden">
+                      <div className="product-image-container overflow-hidden d-flex align-items-center justify-content-center">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="img-fluid product-image"
+                        />
                       </div>
-                      <button
-                        className="btn btn-success w-100"
-                        onClick={() => handleAddToCart(product)}
-                      >
-                        Add to cart
-                      </button>
+                      <div className="product-body p-3 d-flex flex-column flex-grow-1 text-center">
+                        <h3 className="product-title fw-bold mb-2 fs-5">{product.name}</h3>
+                        <p className="text-muted small">{product.weight}</p>
+                        <div className="d-flex flex-column align-items-center mb-3">
+                          <span className="product-price fw-bold fs-5 mb-2">
+                            ₹{product.price}
+                          </span>
+                          <div className="product-rating text-warning">
+                            {[...Array(5)].map((_, i) => {
+                              const ratingValue = i + 1;
+                              return (
+                                <i
+                                  key={i}
+                                  className={
+                                    product.rating >= ratingValue
+                                      ? "bi bi-star-fill"
+                                      : product.rating >= ratingValue - 0.5
+                                        ? "bi bi-star-half"
+                                        : "bi bi-star"
+                                  }
+                                ></i>
+                              );
+                            })}
+                          </div>
+                        </div>
+                        <Button
+                          variant="success"
+                          className="mt-auto py-2 fw-bold mx-auto btn-add-to-cart"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleAddToCart(product);
+                          }}
+                        >
+                          Add to cart
+                        </Button>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
+
+
+
           </div>
         </div>
 

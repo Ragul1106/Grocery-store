@@ -5,54 +5,54 @@ import { CartContext } from './CartContext';
 import Header from './Header';
 import '../assets/css/ProductDetails.css';
 
-import organicTomatoes from "../assets/images/vege-cate6.png";
-import freshMeat from "../assets/images/meat cate 2.png";
-import seasonalMangoes from "../assets/images/featured pro home 3.png";
-import greenOnions from "../assets/images/featured pro home 4.png";
+import RedChilles from "../assets/images/best deals 1.png";
+import FreshEgg from "../assets/images/best deals 2.png";
+import SoyaChunks from "../assets/images/best deals 3.png";
+import Drybeans from "../assets/images/best deals 4.png";
 
 const productData = [
   {
-    id: '1',
-    name: "Organic Tomatos",
+    id: '31',
+    name: "Red Chilles",
     price: 80,
-    image: organicTomatoes,
+    image: RedChilles,
     images: [
-      { src: organicTomatoes, name: "Organic Tomatos", price: 80 },
-      { src: seasonalMangoes, name: "Seasonal Mangoes", price: 120 },
-      { src: freshMeat, name: "Meat & Seafood", price: 420 },
+      { src: RedChilles, name: "Red Chilles", price: 80 },
+      { src: FreshEgg, name: "Fresh Eggs", price: 120 },
+      { src: SoyaChunks, name: "Soya Chunks", price: 420 },
     ],
   },
   {
-    id: '2',
-    name: "Meat & Seafood",
+    id: '32',
+    name: "Fresh Eggs",
     price: 420,
-    image: freshMeat,
+    image: FreshEgg,
     images: [
-      { src: freshMeat, name: "Meat & Seafood", price: 100 },
-      { src: seasonalMangoes, name: "Seasonal Mangoes", price: 120 },
-      { src: organicTomatoes, name: "Organic Tomatos", price: 420 },
+      { src: FreshEgg, name: "Fresh Eggs", price: 100 },
+      { src: SoyaChunks, name: "Soya Chunks", price: 120 },
+      { src: Drybeans, name: "Dry Beans", price: 420 },
     ],
   },
   {
-    id: '3',
-    name: "Seasonal Mangoes",
+    id: '33',
+    name: "Soya Chunks",
     price: 120,
-    image: seasonalMangoes,
+    image: SoyaChunks,
     images: [
-      { src: seasonalMangoes, name: "Seasonal Mangoes", price: 120 },
-      { src: freshMeat, name: "Meat & Seafood", price: 420 },
-      { src: greenOnions, name: "Green Onions", price: 100 },
+      { src: SoyaChunks, name: "Soya Chunks", price: 120 },
+      { src: Drybeans, name: "Dry Beans", price: 70 },
+      { src: FreshEgg, name: "Fresh Eggs", price: 100 },
     ],
   },
   {
-    id: '4',
-    name: "Green Onions",
+    id: '34',
+    name: "Dry Beans",
     price: 100,
-    image: greenOnions,
+    image: Drybeans,
     images: [
-      { src: greenOnions, name: "Green Onions", price: 100 },
-      { src: seasonalMangoes, name: "Seasonal Mangoes", price: 120 },
-      { src: freshMeat, name: "Meat & Seafood", price: 420 },
+      { src: Drybeans, name: "Dry Beans", price: 70 },
+      { src: RedChilles, name: "Red Chilles", price: 30 },
+      { src: FreshEgg, name: "Fresh Eggs", price: 120 },
     ],
   },
 ];
@@ -86,7 +86,7 @@ const strawberryDescription = {
   ]
 };
 
-const ProductDetail = () => {
+const BestDeals = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
   const [product, setProduct] = useState(null);
@@ -102,16 +102,18 @@ const ProductDetail = () => {
     }
   }, [productId]);
 
-  const handleAddToCart = () => {
+ const handleAddToCart = () => {
     if (selectedVariant) {
-      addToCart({
-        id: `${productId}-${weight}`,
+      const cartItem = {
+        id: `${productId}-${selectedVariant.name.replace(/\s+/g, '-')}`,
         name: selectedVariant.name,
         price: selectedVariant.price,
         image: selectedVariant.src,
         quantity,
-        weight
-      });
+        weight,
+        category: selectedVariant.category
+      };
+      addToCart(cartItem);
     }
   };
 
@@ -128,7 +130,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <Helmet>
+     <Helmet>
         <title>{selectedVariant.name} | Grocery Store</title>
       </Helmet>
       <Header />
@@ -161,24 +163,23 @@ const ProductDetail = () => {
             <p><strong>TAX INCLUDED | SHIPPING CALCULATED AT CHECKOUT</strong></p>
 
             <div className="d-flex align-items-center my-3">
-              <button
-                className="btn border-0 shadow-none"
-                onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
-              >-</button>
+             <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => Math.max(prev - 1, 1))}
+                >-</button>
 
-              <span
-                className="px-3 py-1 text-white rounded text-center fw-bold"
-                style={{ minWidth: '40px', backgroundColor: "#4EB528" }}
-              >
-                {quantity}
-              </span>
+                <span
+                  className="px-3 py-1 text-white rounded text-center fw-bold"
+                  style={{ minWidth: '40px',backgroundColor:"#4EB528" }}
+                >
+                  {quantity}
+                </span>
 
-              <button
-                className="btn border-0 shadow-none"
-                onClick={() => setQuantity(prev => prev + 1)}
-              >+</button>
+                <button
+                  className="btn border-0 shadow-none"
+                  onClick={() => setQuantity(prev => prev + 1)}
+                >+</button>
             </div>
-
 
             <p><strong>Quantity: {weight}</strong></p>
             <div className="mb-3">
@@ -252,4 +253,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default BestDeals;

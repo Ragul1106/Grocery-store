@@ -29,12 +29,15 @@ import Register from './components/RegisterPage';
 import Login from './components/LoginPage';
 import Address from './components/AddressPage';
 import Payment from './components/PaymentPage';
+import BestDeals from './components/BestDeals';
+import ScrollToTop from './components/Scroll';
 
 function App() {
   return (
     <CartProvider>
       <Router>
         <Header />
+        <ScrollToTop/>
         <div className="container mt-5 pt-5">
           <Routes>
 
@@ -62,6 +65,7 @@ function App() {
             <Route path="/terms-conditions" element={<TermsAndConditions />} />
             <Route path="/about-us" element={<AboutUs />} />
 
+            <Route path="/best-deals/:productId" element={<BestDeals />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/product/best-sales/:productId" element={<BestSellingProduct />} />
             <Route path="/product/:category/:productId" element={<ProductDetailRouter />} />
