@@ -5,19 +5,29 @@ import 'react-toastify/dist/ReactToastify.css';
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(() => {
-    const storedCart = localStorage.getItem('cartItems');
-    return storedCart ? JSON.parse(storedCart) : [];
-  });
+  const [cartItems, setCartItems] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
+    const user = localStorage.getItem('loggedInUser');
+    setCurrentUser(user);
+
+    if (user) {
+      const userCart = localStorage.getItem(`cart_${user}`);
+      setCartItems(userCart ? JSON.parse(userCart) : []);
+    } else {
+      setCartItems([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentUser) {
+      localStorage.setItem(`cart_${currentUser}`, JSON.stringify(cartItems));
+    }
+  }, [cartItems, currentUser]);
 
   const addToCart = (product) => {
-    const loggedInUser = localStorage.getItem('loggedInUser');
-
-    if (!loggedInUser) {
+    if (!currentUser) {
       toast.warning(`You need to be logged in to add "${product.name}" to your cart`);
       return;
     }
@@ -55,8 +65,23 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const clearCart = () => {
+    if (currentUser) {
+      localStorage.removeItem(`cart_${currentUser}`);
+    }
+    setCartItems([]);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, setCartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        setCartItems,
+        addToCart,
+        removeFromCart,
+        clearCart
+      }}
+    >
       <>
         {children}
         <ToastContainer position="bottom-right" autoClose={2000} hideProgressBar={false} />
