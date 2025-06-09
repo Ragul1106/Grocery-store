@@ -45,7 +45,7 @@
 }
 
 .search-input {
-  border: 2px solid black !important;
+  border: 1px solid black !important;
     padding: 8px 15px;
     border-radius: 0 !important; 
 }
@@ -112,11 +112,14 @@
 .btn-success.account-btn {
   background-color: #4EB528;
   color: white;
+  
 }
 
 .btn-outline-success.account-btn {
   color: #4EB528;
   border-color: #4EB528;
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 
 .cart-link {
