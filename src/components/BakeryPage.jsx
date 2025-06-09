@@ -16,13 +16,13 @@ import bakery8 from '../assets/images/bakery cate 8.png';
 
 const productsData = [
   { id: "bakery1", name: 'Cookies', price: 60, rating: 4.5, image: bakery1 },
-       { id: "bakery1", name: 'stuffed sweet', price: 100, rating: 4.1, image: bakery2 },
-       { id: "bakery1", name: 'Samosa', price: 40, rating: 4.3, image: bakery3 },
-       { id: "bakery1", name: 'Donut', price: 80, rating: 4.6, image: bakery4 },
-       { id: "bakery1", name: 'Choco Bun', price: 30, rating: 4.7, image: bakery5 },
-       { id: "bakery1", name: 'Cookies 2', price: 50, rating: 4.5, image: bakery6 },
-       { id: "bakery1", name: 'Samosa 2', price: 90, rating: 4.3, image: bakery7 },
-       { id: "bakery1", name: 'Cookies 3', price: 70, rating: 4.4, image: bakery8 },
+       { id: "bakery2", name: 'stuffed sweet', price: 100, rating: 4.1, image: bakery2 },
+       { id: "bakery3", name: 'Samosa', price: 40, rating: 4.3, image: bakery3 },
+       { id: "bakery4", name: 'Donut', price: 80, rating: 4.6, image: bakery4 },
+       { id: "bakery5", name: 'Choco Bun', price: 30, rating: 4.7, image: bakery5 },
+       { id: "bakery6", name: 'Cookies 2', price: 50, rating: 4.5, image: bakery6 },
+       { id: "bakery7", name: 'Samosa 2', price: 90, rating: 4.3, image: bakery7 },
+       { id: "bakery8", name: 'Cookies 3', price: 70, rating: 4.4, image: bakery8 },
 ];
 
 const Bakery = () => {

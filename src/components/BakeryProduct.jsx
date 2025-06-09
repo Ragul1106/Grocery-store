@@ -52,14 +52,14 @@ const allProducts = [
       },
       {
         src: bakery1,
-        name: 'Red Banana',
+        name: 'Barfi',
         price: 75,
         category: "Bakery",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: bakery7,
-        name: 'Raw Banana',
+        name: 'Kheer',
         price: 50,
         category: "Bakery",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -78,14 +78,14 @@ const allProducts = [
       },
       {
         src: bakery3,
-        name: 'Tangerine',
+        name: 'Gajar ka Halwa',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery6,
-        name: 'Mandarin Orange',
+        name: 'Shrikhand',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -104,14 +104,14 @@ const allProducts = [
       },
       {
         src: bakery6,
-        name: 'Tangerine',
+        name: 'Mysore Pak',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery8,
-        name: 'Mandarin Orange',
+        name: 'Balushahi',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: bakery3,
-        name: 'Tangerine',
+        name: 'Laddoo',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery8,
-        name: 'Mandarin Orange',
+        name: 'Basundi',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -156,14 +156,14 @@ const allProducts = [
       },
       {
         src: bakery1,
-        name: 'Tangerine',
+        name: 'Malpua',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery7,
-        name: 'Mandarin Orange',
+        name: 'Ras Malai',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -182,14 +182,14 @@ const allProducts = [
       },
       {
         src: bakery3,
-        name: 'Tangerine',
+        name: 'Jalebi',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery2,
-        name: 'Mandarin Orange',
+        name: 'Barfi',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: bakery3,
-        name: 'Tangerine',
+        name: 'Rasgulla',
         price: 110,
         category: "Bakery",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: bakery5,
-        name: 'Mandarin Orange',
+        name: 'Halwa',
         price: 115,
         category: "Bakery",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'

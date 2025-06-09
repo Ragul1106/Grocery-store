@@ -48,9 +48,10 @@ const HomePage = () => {
   const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
-    useEffect(() => {
+
+  useEffect(() => {
     document.title = "Home/Groceries store";
-},[]);
+  }, []);
 
   const products = [
     { id: 1, name: "Organic Tomatos", price: 80, rating: 5, image: organicTomatoes, path: "/vegetable" },
@@ -132,7 +133,7 @@ const HomePage = () => {
                   grains, and lean proteins, play a crucial role in nourishing
                   our bodies and promoting overall well-being
                 </p>
-                <button className="btn text-light fw-bold" style={{backgroundColor:"#FF7C08"}} onClick={() => navigate('/category')}>
+                <button className="btn text-light fw-bold" style={{ backgroundColor: "#FF7C08" }} onClick={() => navigate('/category')}>
                   Shop Now
                 </button>
 
@@ -155,7 +156,7 @@ const HomePage = () => {
                   <br />
                   To 50% Off
                 </h4>
-                <button className="btn text-light fw-bold" style={{backgroundColor:"#FF7C08"}} onClick={() => navigate('/category')}>
+                <button className="btn text-light fw-bold" style={{ backgroundColor: "#FF7C08" }} onClick={() => navigate('/category')}>
                   Shop Now
                 </button>
               </div>
@@ -183,7 +184,7 @@ const HomePage = () => {
                       <img
                         src={cat.icon}
                         alt={cat.name}
-                        className="category-icon"
+                        className="category-icon "
                       />
                     </div>
                     <h6 className="fw-bold mb-1">{cat.name}</h6>
@@ -285,6 +286,7 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+
         </div>
 
         <div className="container product-category">
@@ -471,8 +473,6 @@ const HomePage = () => {
                   </p>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>

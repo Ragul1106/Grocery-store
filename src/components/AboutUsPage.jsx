@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import { Helmet } from 'react-helmet';
-
 import '../assets/css/document.css';
 
 const AboutUs = () => {

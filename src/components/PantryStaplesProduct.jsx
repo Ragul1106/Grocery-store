@@ -26,14 +26,14 @@ const allProducts = [
       },
       {
         src: pantry2,
-        name: 'Green Apple',
+        name: 'Item2',
         price: 160,
         category: "Pantry Staples",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: pantry3,
-        name: 'Organic Apple',
+        name: 'Item3',
         price: 180,
         category: "Pantry Staples",
         description: 'Organically grown apples without synthetic chemicals.'
@@ -52,14 +52,14 @@ const allProducts = [
       },
       {
         src: pantry1,
-        name: 'Red Banana',
+        name: 'Item1',
         price: 75,
         category: "Pantry Staples",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: pantry7,
-        name: 'Raw Banana',
+        name: 'Chilly',
         price: 50,
         category: "Pantry Staples",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -71,7 +71,7 @@ const allProducts = [
     images: [
       {
         src: pantry3,
-        name: 'Chilly Powder',
+        name: 'Item3',
         price: 100,
         category: "Pantry Staples",
         description: 'Juicy oranges full of Vitamin C and flavor.'
@@ -85,7 +85,7 @@ const allProducts = [
       },
       {
         src: pantry6,
-        name: 'Mandarin Orange',
+        name: 'Item6',
         price: 115,
         category: "Pantry Staples",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -104,7 +104,7 @@ const allProducts = [
       },
       {
         src: pantry6,
-        name: 'Tangerine',
+        name: 'Item6',
         price: 110,
         category: "Pantry Staples",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
@@ -113,7 +113,7 @@ const allProducts = [
         src: pantry8,
         name: 'Mandarin Orange',
         price: 115,
-        category: "Pantry Staples",
+        category: "Oil",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
       },
     ]
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: pantry3,
-        name: 'Tangerine',
+        name: 'Item3',
         price: 110,
         category: "Pantry Staples",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: pantry8,
-        name: 'Mandarin Orange',
+        name: 'Oil',
         price: 115,
         category: "Pantry Staples",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -156,14 +156,14 @@ const allProducts = [
       },
       {
         src: pantry1,
-        name: 'Tangerine',
+        name: 'Item21',
         price: 110,
         category: "Pantry Staples",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: pantry7,
-        name: 'Mandarin Orange',
+        name: 'Item7',
         price: 115,
         category: "Pantry Staples",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -182,14 +182,14 @@ const allProducts = [
       },
       {
         src: pantry3,
-        name: 'Tangerine',
+        name: 'Item7',
         price: 110,
         category: "Pantry Staples",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: pantry2,
-        name: 'Mandarin Orange',
+        name: 'Item2',
         price: 115,
         category: "Pantry Staples",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: pantry3,
-        name: 'Tangerine',
+        name: 'Item3',
         price: 110,
         category: "Pantry Staples",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: pantry5,
-        name: 'Mandarin Orange',
+        name: 'Item2',
         price: 115,
         category: "Pantry Staples",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -253,7 +253,7 @@ const strawberryDescription = {
   ]
 };
 
-const FruitProduct = () => {
+const PantryStaples = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -420,4 +420,4 @@ const FruitProduct = () => {
   );
 };
 
-export default FruitProduct;
+export default PantryStaples;

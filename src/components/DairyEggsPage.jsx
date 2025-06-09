@@ -15,7 +15,7 @@ import egg7 from '../assets/images/diary cate 7.png';
 import egg8 from '../assets/images/diary cate 8.png';
 
 const productsData = [
-  { id: "diary1", name: 'Egg', price: 60, rating: 4.5, image: egg1 },
+  { id: "diary1", name: 'Eggs', price: 60, rating: 4.5, image: egg1 },
        { id: "diary2", name: 'Milk', price: 100, rating: 4.1, image: egg2 },
        { id: "diary3", name: 'Boiled Egg', price: 40, rating: 4.3, image: egg3 },
        { id: "diary4", name: 'Butter', price: 80, rating: 4.6, image: egg4 },
@@ -25,7 +25,7 @@ const productsData = [
        { id: "diary8", name: 'Colored Egg', price: 70, rating: 4.4, image: egg8 },
 ];
 
-const Vegetable = () => {
+const DairyEggs = () => {
   const [priceFilter, setPriceFilter] = useState(100);
   const [sortType, setSortType] = useState('featured');
   const [filteredProducts, setFilteredProducts] = useState(productsData);
@@ -153,4 +153,4 @@ const Vegetable = () => {
 );
 };
 
-export default Vegetable;
+export default DairyEggs;

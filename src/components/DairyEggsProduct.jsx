@@ -26,14 +26,14 @@ const allProducts = [
       },
       {
         src: diary2,
-        name: 'Green Apple',
+        name: 'Milk',
         price: 160,
         category: "Dairy & Eggs",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: diary3,
-        name: 'Organic Apple',
+        name: 'Boiled Egg',
         price: 180,
         category: "Dairy & Eggs",
         description: 'Organically grown apples without synthetic chemicals.'
@@ -52,14 +52,14 @@ const allProducts = [
       },
       {
         src: diary5,
-        name: 'Red Banana',
+        name: 'Cheese with Egg',
         price: 75,
         category: "Dairy & Eggs",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: diary7,
-        name: 'Raw Banana',
+        name: 'Cut Cheese',
         price: 50,
         category: "Dairy & Eggs",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -78,14 +78,14 @@ const allProducts = [
       },
       {
         src: diary6,
-        name: 'Tangerine',
+        name: 'Cheese',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary8,
-        name: 'Mandarin Orange',
+        name: 'Eggs',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -104,14 +104,14 @@ const allProducts = [
       },
       {
         src: diary6,
-        name: 'Tangerine',
+        name: 'Cheese',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary8,
-        name: 'Mandarin Orange',
+        name: 'Colered Egg',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: diary6,
-        name: 'Tangerine',
+        name: 'Cheese',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary8,
-        name: 'Mandarin Orange',
+        name: 'Colored Egg',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -156,14 +156,14 @@ const allProducts = [
       },
       {
         src: diary1,
-        name: 'Tangerine',
+        name: 'Eggs',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary7,
-        name: 'Mandarin Orange',
+        name: 'Cut Cheese',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -182,14 +182,14 @@ const allProducts = [
       },
       {
         src: diary3,
-        name: 'Tangerine',
+        name: 'Boiled Egg',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary2,
-        name: 'Mandarin Orange',
+        name: 'Milk',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: diary3,
-        name: 'Tangerine',
+        name: 'Boiled Egg',
         price: 110,
         category: "Dairy & Eggs",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: diary5,
-        name: 'Mandarin Orange',
+        name: 'Cheese Egg',
         price: 115,
         category: "Dairy & Eggs",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -253,7 +253,7 @@ const strawberryDescription = {
   ]
 };
 
-const FruitProduct = () => {
+const DairyEggsProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -419,4 +419,4 @@ const FruitProduct = () => {
   );
 };
 
-export default FruitProduct;
+export default DairyEggsProduct;

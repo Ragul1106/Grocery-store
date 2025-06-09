@@ -253,7 +253,7 @@ const strawberryDescription = {
   ]
 };
 
-const BestSellingProduct = () => {
+const BestSalesProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -420,4 +420,4 @@ const BestSellingProduct = () => {
   );
 };
 
-export default BestSellingProduct;
+export default BestSalesProduct;

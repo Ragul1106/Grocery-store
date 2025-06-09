@@ -15,7 +15,7 @@ import frozen7 from '../assets/images/frozen cate 7.png';
 import frozen8 from '../assets/images/frozen cate 8.png';
 
 const productsData = [
-  { id: "frozen1", name: 'Frezzed Apple', price: 60, rating: 4.5, image: frozen1 },
+  { id: "frozen1", name: 'Freezed Apple', price: 60, rating: 4.5, image: frozen1 },
        { id: "frozen2", name: 'Mango Ice', price: 100, rating: 4.1, image: frozen2 },
        { id: "frozen3", name: 'Ice Cream 2', price: 40, rating: 4.3, image: frozen3 },
        { id: "frozen4", name: 'Mutton', price: 80, rating: 4.6, image: frozen4 },

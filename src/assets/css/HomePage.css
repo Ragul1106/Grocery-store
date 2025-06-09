@@ -18,6 +18,11 @@
   background-color: #1a1a1a;
 }
 
+
+.disabled-product {
+  pointer-events: auto; 
+}
+
 .offer-tag {
   position: absolute;
   top: 0;
@@ -42,6 +47,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(255, 165, 0, 0.2);
@@ -52,7 +58,7 @@
 .category-icon-wrapper {
   display: inline-block;
   padding: 5px;
-  border: 2px dotted #ccc;
+  border: 2px solid #ccc;
   border-radius: 50%;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -63,13 +69,15 @@
 }
 
 .category-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 50px;
   border-radius: 50%;
   background-color: #f9f9f9;
   padding: 5px;
   border: 2px solid #eee;
+  box-sizing: border-box;
 }
+
 .category-icon:hover {
   background-color: #FF7C08;
 }

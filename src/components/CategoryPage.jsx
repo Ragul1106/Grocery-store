@@ -34,8 +34,6 @@ const Category = () => {
         <title>Category/Grocery Store</title>
       </Helmet>
 
-
-
       <Header />
       <main className='category'>
         <div className="container mt-5 pt-5">

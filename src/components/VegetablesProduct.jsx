@@ -205,7 +205,7 @@ const allProducts = [
   },
 ];
 
-const VegProductDetail = () => {
+const VegetableProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -400,4 +400,4 @@ const VegProductDetail = () => {
   );
 };
 
-export default VegProductDetail;
+export default VegetableProduct;

@@ -40,31 +40,31 @@ const Header = () => {
 
   const productCategoryMap = {
 
-    tomato: "/vegetable",
-    spinach: "/vegetable",
-    corn: "/vegetable",
-    carrot: "/vegetable",
-    garlic: "/vegetable",
-    beetroot: "/vegetable",
-    onion: "/vegetable",
-    potato: "/vegetable",
+    tomato: { path: "/product/vegetable", id: "veg1" },
+    spinach: { path: "/product/vegetable", id: "veg5" },
+    corn: { path: "/product/vegetable", id: "veg4" },
+    carrot: { path: "/product/vegetable", id: "veg2" },
+    garlic: { path: "/product/vegetable", id: "veg3" },
+    beetroot: { path: "/product/vegetable", id: "veg8" },
+    onion: { path: "/product/vegetable", id: "veg7" },
+    Tomato: { path: "/product/vegetable", id: "veg6" },
 
-    banana: "/fruits",
-    apple: "/fruits",
-    cherry: "/fruits",
-    pista: "/fruits",
-    strawberry: "/fruits",
-    watermelon: "/fruits",
-    blueberry: "/fruits",
-    orange: "/fruits",
+    banana: { path: "/product/fruits", id: "fruit3" },
+    apple: { path: "/product/fruits", id: "fruit2" },
+    cherry: { path: "/product/fruits", id: "fruit7" },
+    pista: { path: "/product/fruits", id: "fruit8" },
+    strawberry:  { path: "/product/fruits", id: "fruit1" },
+    watermelon: { path: "/product/fruits", id: "fruit4" },
+    blueberry: { path: "/product/fruits", id: "fruit5" },
+    orange:{ path: "/product/fruits", id: "fruit6" },
 
-    milk: "/dairy-eggs",
-    boiledEgg: "/dairy-eggs",
-    butter: "/dairy-eggs",
-    cheeseEgg: "/dairy-eggs",
-    cheese: "/dairy-eggs",
-    cutCheese: "/dairy-eggs",
-    coloredEgg: "/dairy-eggs",
+    milk: { path: "/product/dairy-eggs", id: "diary2" },
+    boiledEgg: { path: "/product/dairy-eggs", id: "diary1" },
+    butter:{ path: "/product/dairy-eggs", id: "diary4" },
+    cheeseEgg: { path: "/product/dairy-eggs", id: "diary5" },
+    cheese: { path: "/product/dairy-eggs", id: "diary6" },
+    cutCheese: { path: "/product/dairy-eggs", id: "diary7" },
+    coloredEgg: { path: "/product/dairy-eggs", id: "fruit6" },
     yogurt: "/dairy-eggs", 
 
     cookies: "/bakery",
@@ -118,15 +118,15 @@ const Header = () => {
     window.location.reload();
   };
 
-  const handleSearch = () => {
-    const lowerTerm = searchTerm.toLowerCase().trim();
-
-    if (productCategoryMap[lowerTerm]) {
-      navigate(productCategoryMap[lowerTerm]);
-    } else {
-      alert("Product not found.");
-    }
-  };
+   const handleSearch = () => {
+  const lowerTerm = searchTerm.toLowerCase().trim();
+  const product = productCategoryMap[lowerTerm];
+  
+  if (product) {
+    navigate(`${product.path}/${product.id}`);
+  } else {
+    alert("Product not found");}
+};
 
 
   return (

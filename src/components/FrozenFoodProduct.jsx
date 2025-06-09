@@ -26,14 +26,14 @@ const allProducts = [
       },
       {
         src: frozen2,
-        name: 'Green Apple',
+        name: 'Mango Ice',
         price: 160,
         category: "Frozen Food",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: frozen3,
-        name: 'Organic Apple',
+        name: 'Ice Cream',
         price: 180,
         category: "Frozen Food",
         description: 'Organically grown apples without synthetic chemicals.'
@@ -52,14 +52,14 @@ const allProducts = [
       },
       {
         src: frozen5,
-        name: 'Red Banana',
+        name: 'Freezed Fish',
         price: 75,
         category: "Frozen Food",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: frozen7,
-        name: 'Raw Banana',
+        name: 'Ice Bar',
         price: 50,
         category: "Frozen Food",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -78,14 +78,14 @@ const allProducts = [
       },
       {
         src: frozen7,
-        name: 'Tangerine',
+        name: 'Ice Bar',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen6,
-        name: 'Mandarin Orange',
+        name: 'Mango Ice',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -104,14 +104,14 @@ const allProducts = [
       },
       {
         src: frozen6,
-        name: 'Tangerine',
+        name: 'Mango Ice',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen8,
-        name: 'Mandarin Orange',
+        name: 'Cone Ice',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: frozen3,
-        name: 'Tangerine',
+        name: 'Ice Cream',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen8,
-        name: 'Mandarin Orange',
+        name: 'Cone Ice',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -156,14 +156,14 @@ const allProducts = [
       },
       {
         src: frozen1,
-        name: 'Tangerine',
+        name: 'Freezed Apple',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen7,
-        name: 'Mandarin Orange',
+        name: 'Ice Bar',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -182,14 +182,14 @@ const allProducts = [
       },
       {
         src: frozen3,
-        name: 'Tangerine',
+        name: 'Ice Cream 2',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen2,
-        name: 'Mandarin Orange',
+        name: 'Mango Ice',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: frozen3,
-        name: 'Tangerine',
+        name: 'Ice Cream 2',
         price: 110,
         category: "Frozen Food",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: frozen5,
-        name: 'Mandarin Orange',
+        name: 'Freezed Fish',
         price: 115,
         category: "Frozen Food",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -253,7 +253,7 @@ const strawberryDescription = {
   ]
 };
 
-const FruitProduct = () => {
+const FrozenFoodProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -418,4 +418,4 @@ const FruitProduct = () => {
   );
 };
 
-export default FruitProduct;
+export default FrozenFoodProduct;

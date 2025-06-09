@@ -104,14 +104,14 @@ const allProducts = [
       },
       {
         src: fruits6,
-        name: 'Tangerine',
+        name: 'Orange',
         price: 110,
         category: "Fruits",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: fruits8,
-        name: 'Mandarin Orange',
+        name: 'Pista',
         price: 115,
         category: "Fruits",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: fruits6,
-        name: 'Tangerine',
+        name: 'Orange',
         price: 110,
         category: "Fruits",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: fruits8,
-        name: 'Mandarin Orange',
+        name: 'Pista',
         price: 115,
         category: "Fruits",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -155,15 +155,15 @@ const allProducts = [
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
-        src: fruits6,
-        name: 'Tangerine',
+        src: fruits1,
+        name: 'Strawberry',
         price: 110,
         category: "Fruits",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
-        src: fruits8,
-        name: 'Mandarin Orange',
+        src: fruits4,
+        name: 'Watermelon',
         price: 115,
         category: "Fruits",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -181,15 +181,15 @@ const allProducts = [
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
-        src: fruits6,
-        name: 'Tangerine',
+        src: fruits4,
+        name: 'Watermelon',
         price: 110,
         category: "Fruits",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
-        src: fruits8,
-        name: 'Mandarin Orange',
+        src: fruits2,
+        name: 'Apple',
         price: 115,
         category: "Fruits",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: fruits6,
-        name: 'Tangerine',
+        name: 'Orange',
         price: 110,
         category: "Fruits",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
-        src: fruits8,
-        name: 'Mandarin Orange',
+        src: fruits3,
+        name: 'Banana',
         price: 115,
         category: "Fruits",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'

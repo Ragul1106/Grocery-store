@@ -26,14 +26,14 @@ const allProducts = [
       },
       {
         src: meat2,
-        name: 'Green Apple',
+        name: 'Beaf',
         price: 160,
         category: "Meat & Seafood",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: meat3,
-        name: 'Organic Apple',
+        name: 'Chicken',
         price: 180,
         category: "Meat & Seafood",
         description: 'Organically grown apples without synthetic chemicals.'
@@ -52,14 +52,14 @@ const allProducts = [
       },
       {
         src: meat1,
-        name: 'Red Banana',
+        name: 'Prawn',
         price: 75,
         category: "Meat & Seafood",
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
-        src: meat7,
-        name: 'Raw Banana',
+        src: meat8,
+        name: 'Mutton',
         price: 50,
         category: "Meat & Seafood",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -77,15 +77,15 @@ const allProducts = [
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
-        src: meat8,
-        name: 'Tangerine',
+        src: meat1,
+        name: 'Prawn',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
-        src: meat6,
-        name: 'Mandarin Orange',
+        src: meat7,
+        name: '2 Fish Pieces',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -104,14 +104,14 @@ const allProducts = [
       },
       {
         src: meat6,
-        name: 'Tangerine',
+        name: 'Small Chicken',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: meat8,
-        name: 'Mandarin Orange',
+        name: 'Mutton',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -130,14 +130,14 @@ const allProducts = [
       },
       {
         src: meat3,
-        name: 'Tangerine',
+        name: 'Chicken',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: meat8,
-        name: 'Mandarin Orange',
+        name: 'Mutton',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -156,14 +156,14 @@ const allProducts = [
       },
       {
         src: meat1,
-        name: 'Tangerine',
+        name: 'Prawn',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: meat7,
-        name: 'Mandarin Orange',
+        name: '2 Fish Pieces',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -182,14 +182,14 @@ const allProducts = [
       },
       {
         src: meat3,
-        name: 'Tangerine',
+        name: 'Chicken',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: meat2,
-        name: 'Mandarin Orange',
+        name: 'Fish',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -208,14 +208,14 @@ const allProducts = [
       },
       {
         src: meat3,
-        name: 'Tangerine',
+        name: 'Chicken',
         price: 110,
         category: "Meat & Seafood",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: meat5,
-        name: 'Mandarin Orange',
+        name: 'Fish',
         price: 115,
         category: "Meat & Seafood",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -253,7 +253,7 @@ const strawberryDescription = {
   ]
 };
 
-const FruitProduct = () => {
+const MeatSeaFoodProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -419,4 +419,4 @@ const FruitProduct = () => {
   );
 };
 
-export default FruitProduct;
+export default MeatSeaFoodProduct;

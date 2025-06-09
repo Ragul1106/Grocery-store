@@ -26,14 +26,14 @@ const allProducts = [
       },
       {
         src: Snack2,
-        name: 'Green Apple',
+        name: 'Orange Juice',
         price: 160,
         category: "Snacks & Beverage",
         description: 'Tangy green apples, great for salads and detox.'
       },
       {
         src: Snack3,
-        name: 'Organic Apple',
+        name: 'Watermelon Juice',
         price: 180,
         category: "Snacks & Beverage",
         description: 'Organically grown apples without synthetic chemicals.'
@@ -52,13 +52,13 @@ const allProducts = [
       },
       {
         src: Snack1,
-        name: 'Red Banana',
+        name: 'Donuts',
         price: 75,
         description: 'Unique red bananas with a sweet and creamy taste.'
       },
       {
         src: Snack7,
-        name: 'Raw Banana',
+        name: 'PopCorn',
         price: 50,
         category: "Snacks & Beverage",
         description: 'Starchy raw bananas used for savory dishes.'
@@ -76,15 +76,15 @@ const allProducts = [
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
-        src: Snack3,
-        name: 'Tangerine',
+        src: Snack1,
+        name: 'Crackers',
         price: 110,
         category: "Snacks & Beverage",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack6,
-        name: 'Mandarin Orange',
+        name: 'Burger',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -96,21 +96,21 @@ const allProducts = [
     images: [
       {
         src: Snack4,
-        name: 'Tea Bags',
+        name: 'Butter',
         price: 100,
         category: "Snacks & Beverage",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: Snack6,
-        name: 'Tangerine',
+        name: 'Burger',
         price: 110,
         category: "Snacks & Beverage",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack8,
-        name: 'Mandarin Orange',
+        name: 'Cold Coffee',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -122,20 +122,20 @@ const allProducts = [
     images: [
       {
         src: Snack5,
-        name: 'Chocolate ',
+        name: 'Buiscut ',
         price: 100,
         category: "Snacks & Beverage",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: Snack3,
-        name: 'Tangerine',
+        name: 'Watermelon Juice',
         price: 110,
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack8,
-        name: 'Mandarin Orange',
+        name: 'Cold Coffee',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -147,21 +147,21 @@ const allProducts = [
     images: [
       {
         src: Snack6,
-        name: 'Soda',
+        name: 'Burger',
         price: 100,
         category: "Snacks & Beverage",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: Snack1,
-        name: 'Tangerine',
+        name: 'Donuts',
         price: 110,
         category: "Snacks & Beverage",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack7,
-        name: 'Mandarin Orange',
+        name: 'Popcorn',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -173,21 +173,21 @@ const allProducts = [
     images: [
       {
         src: Snack7,
-        name: 'Orange Juice',
+        name: 'Popcorn',
         price: 100,
         category: "Snacks & Beverage",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: Snack3,
-        name: 'Tangerine',
+        name: 'Watermelon Juice',
         price: 110,
         category: "Snacks & Beverage",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack2,
-        name: 'Mandarin Orange',
+        name: 'Orange Juice',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -199,21 +199,21 @@ const allProducts = [
     images: [
       {
         src: Snack8,
-        name: 'Chips',
+        name: 'Cold Coffee',
         price: 100,
         category: "Snacks & Beverage",
         description: 'Juicy oranges full of Vitamin C and flavor.'
       },
       {
         src: Snack3,
-        name: 'Tangerine',
+        name: 'Watermelon Juice',
         price: 110,
         category: "Snacks & Beverage",
         description: 'Small and easy-to-peel tangerines with a sweet taste.'
       },
       {
         src: Snack5,
-        name: 'Mandarin Orange',
+        name: 'Buiscut',
         price: 115,
         category: "Snacks & Beverage",
         description: 'Mandarins are sweeter and less acidic than regular oranges.'
@@ -250,7 +250,7 @@ const strawberryDescription = {
   ]
 };
 
-const FruitProduct = () => {
+const SnacksProduct = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -416,4 +416,4 @@ const FruitProduct = () => {
   );
 };
 
-export default FruitProduct;
+export default SnacksProduct;
