@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
     const loggedInUser = localStorage.getItem('loggedInUser');
 
     if (!loggedInUser) {
-      toast.warning('Please login to continue');
+      toast.warning(`You need to be logged in to add "${product.name}" to your cart`);
       return;
     }
 
@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider value={{ cartItems, setCartItems, addToCart, removeFromCart }}>
       <>
         {children}
-        <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
+        <ToastContainer position="bottom-right" autoClose={2000} hideProgressBar={false} />
       </>
     </CartContext.Provider>
   );

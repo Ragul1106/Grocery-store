@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import '../assets/css/Auth.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../assets/css/loginRegister.css';
 
 export default function Login() {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
@@ -12,22 +14,25 @@ export default function Login() {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = () => {
-    const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+ const handleLogin = () => {
+  const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
 
-    if (
-      storedUser &&
-      storedUser.email === loginData.email &&
-      storedUser.password === loginData.password
-    ) {
-      localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
-      alert('Login successful');
+  if (
+    storedUser &&
+    storedUser.email === loginData.email &&
+    storedUser.password === loginData.password
+  ) {
+    localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
+    toast.success('Login successful');
+    setTimeout(() => {
       navigate('/');
       window.location.reload();
-    } else {
-      alert('Enter your details correctly');
-    }
-  };
+    }, 1500);
+  } else {
+    toast.error('Enter your details correctly');
+  }
+};
+
 
   return (
     <div className="auth-wrapper centered">
@@ -69,6 +74,7 @@ export default function Login() {
           Register
         </button>
       </div>
+      <ToastContainer position="top-center" autoClose={2000} />
     </div>
   );
 }

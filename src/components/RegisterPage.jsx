@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import '../assets/css/Auth.css';
+import '../assets/css/loginRegister.css';
 
 export default function Register() {
   const [user, setUser] = useState({

@@ -1,3 +1,4 @@
+
 .banner-content {
   position: absolute;
   top: 10%;
@@ -16,11 +17,6 @@
   height: 100%;
   min-height: 400px;
   background-color: #1a1a1a;
-}
-
-
-.disabled-product {
-  pointer-events: auto; 
 }
 
 .offer-tag {
@@ -47,43 +43,41 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(255, 165, 0, 0.2);
-  background-color: #FF7C08;
+  background-color: #ff7c08;
   z-index: 1000;
 }
 
 .category-icon-wrapper {
   display: inline-block;
   padding: 5px;
-  border: 2px solid #ccc;
+  border: 2px dotted #ccc;
   border-radius: 50%;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-card:hover .category-icon-wrapper {
-  border-color: #FF7C08;
+  border-color:#ff7c08;
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  z-index: 1000;
 }
 
 .category-icon {
-  width: 40px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #f9f9f9;
   padding: 5px;
   border: 2px solid #eee;
-  box-sizing: border-box;
 }
-
 .category-icon:hover {
-  background-color: #FF7C08;
+  background-color: #ff7c08;
 }
 
 .promo-banner {
-  background-image: url('/assets/poster-image-home.png');
+   background-image: url('/assets/poster-image-home.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,13 +116,16 @@
   line-height: 1.2;
 }
 
-
 .promo-button {
   padding: 10px 30px;
   font-weight: 600;
   font-size: 1.1rem;
   border-radius: 30px;
-  background-color: #FF7C08 !important;
+  background-color: #ff7c08 !important;
+  width: 30% !important;
+}
+.shop-button{
+  background-color: #ff7c08 !important;
 }
 
 .featured-products {
@@ -152,7 +149,6 @@
 }
 
 .product-image {
-  
   margin-top: 100px;
   max-height: 400px;
   width: 100%;
@@ -185,20 +181,16 @@
 }
 
 .btn-success {
-  background-color: #4EB528;
-  border-color: #4EB528;
+  background-color: #28a745;
+  border-color: #28a745;
   transition: all 0.2s ease;
   width: 100%;
 }
 
 .btn-success:hover {
-  background-color: #4EB528;
-  border-color: #4EB528;
+  background-color: #218838;
+  border-color: #1e7e34;
 }
-
-
-
-
 
 .tab-btn {
   background: none;
@@ -210,8 +202,8 @@
 }
 
 .active-tab {
-  color: #FF7C08;
-  border-bottom: 2px solid #FF7C08;
+  color: orange;
+  border-bottom: 2px solid orange;
 }
 
 .product-image1 {
@@ -225,6 +217,11 @@
   border-radius: 8px;
 
 }
+.product-box1{
+  padding: 50px 30px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  width: 45%;
+}
 
 .info-card1 {
   width: 150px;
@@ -235,8 +232,6 @@
   text-align: center;
   white-space: nowrap;
 }
-
-
 
 .poster-container {
   height: 500px;
@@ -265,19 +260,13 @@
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  width: 80%;
+  width: 90%;
+  height: 80%;
 
 }
 
 .product-card3:hover {
-  transform: translateY(-5px);
-}
-.card-img-top{
-  width: 200px !important;  
-  height: 160px !important; 
-  object-fit: cover;
-  margin: 0 auto;
-  padding: 8px;
+  transform: translateY(-15px);
 }
 
 .map-img {
@@ -321,6 +310,9 @@
     font-size: 18px;
     padding: 10px 14px;
   }
+  .product-box1{
+  width: 105%;
+}
   .product-card3{
     margin-top: 15px;
   }
@@ -362,6 +354,10 @@
   .promo-text {
     font-size: 1.1rem;
   }
+  .promo-button{
+    margin-top: -5px !important;
+    width: 50% !important;
+}
 }
 
 @media (max-width: 425px) {
@@ -372,25 +368,30 @@
   font-size: 9.3px;
 }
 .category-card{
-  width: 50% !important;
+  width: 100% !important;
 }
 .poster-title {
     margin-top: 60px;
-    font-size: 0.8rem !important;
+    font-size: 0.8em !important;
   }
 
   .poster-para{
-    font-size: 0.8rem;
+    font-size: 0.6em;
     padding-right: 50px ;
   }
 
   .time-box {
+    margin-left: -12px;
     font-size: 16px;
     padding: 8px 10px;
   }
 .product-card3{
     margin-left: 25px;
   }
+  .promo-button{
+    margin-top: -5px !important;
+    width: 70% !important;
+}
 
 .card-img-top{
   width: 190px !important;  
@@ -430,4 +431,3 @@
     width: 100% !important;
   }
 }
-

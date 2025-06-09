@@ -16,7 +16,6 @@ import organicTomatoes from "../assets/images/vege-cate6.png"
 import freshMeat from "../assets/images/meat cate 2.png";
 import seasonalMangoes from "../assets/images/featured pro home 3.png";
 import greenOnions from "../assets/images/featured pro home 4.png";
-
 import lemon from "../assets/images/new arrivals 1.png";
 import apple from "../assets/images/new arrivals 2.png";
 import coconut from "../assets/images/new arrivals 3.png";
@@ -26,7 +25,6 @@ import guava from "../assets/images/trending 3.png";
 import banana from "../assets/images/best selling home 1.png";
 import orange from "../assets/images/best selling home 2.png";
 import pineapple from "../assets/images/best selling home 3.png";
-
 import posterImage from "../assets/images/poster image 2.png";
 import redChilies from "../assets/images/best deals 1.png";
 import eggs from "../assets/images/best deals 2.png";
@@ -398,7 +396,7 @@ const HomePage = () => {
 
           <div
             className="container position-relative bestdeal-product"
-            style={{ marginTop: "-100px", zIndex: 2 }}
+            style={{ marginTop: "-50px", zIndex: 2 }}
           >
             <div className="row procuct-row g-0 ms-lg-5">
               {products_bestdeals.map((product) => (
