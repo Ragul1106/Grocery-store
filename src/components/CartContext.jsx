@@ -4,30 +4,56 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
+const getLoggedInUserEmail = () => {
+  const loggedInUser = localStorage.getItem('loggedInUser');
+  if (loggedInUser) {
+    try {
+      const user = JSON.parse(loggedInUser);
+      return user.email;
+    } catch {
+      return null;
+    }
+  }
+  return null;
+};
+
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
-  const [currentUser, setCurrentUser] = useState(null);
+  const [cartItems, setCartItems] = useState(() => {
+    const email = getLoggedInUserEmail();
+    if (email) {
+      const allCarts = JSON.parse(localStorage.getItem('userCarts')) || {};
+      return allCarts[email] || [];
+    }
+    return [];
+  });
 
   useEffect(() => {
-    const user = localStorage.getItem('loggedInUser');
-    setCurrentUser(user);
-
-    if (user) {
-      const userCart = localStorage.getItem(`cart_${user}`);
-      setCartItems(userCart ? JSON.parse(userCart) : []);
-    } else {
-      setCartItems([]);
+    const email = getLoggedInUserEmail();
+    if (email) {
+      const allCarts = JSON.parse(localStorage.getItem('userCarts')) || {};
+      allCarts[email] = cartItems;
+      localStorage.setItem('userCarts', JSON.stringify(allCarts));
     }
+  }, [cartItems]);
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const email = getLoggedInUserEmail();
+      if (!email) {
+        setCartItems([]);
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
-  useEffect(() => {
-    if (currentUser) {
-      localStorage.setItem(`cart_${currentUser}`, JSON.stringify(cartItems));
-    }
-  }, [cartItems, currentUser]);
-
   const addToCart = (product) => {
-    if (!currentUser) {
+    const email = getLoggedInUserEmail();
+    if (!email) {
       toast.warning(`You need to be logged in to add "${product.name}" to your cart`);
       return;
     }
@@ -65,23 +91,8 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  const clearCart = () => {
-    if (currentUser) {
-      localStorage.removeItem(`cart_${currentUser}`);
-    }
-    setCartItems([]);
-  };
-
   return (
-    <CartContext.Provider
-      value={{
-        cartItems,
-        setCartItems,
-        addToCart,
-        removeFromCart,
-        clearCart
-      }}
-    >
+    <CartContext.Provider value={{ cartItems, setCartItems, addToCart, removeFromCart }}>
       <>
         {children}
         <ToastContainer position="bottom-right" autoClose={2000} hideProgressBar={false} />

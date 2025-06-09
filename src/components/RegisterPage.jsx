@@ -51,13 +51,18 @@ export default function Register() {
     if (Object.keys(validationErrors).length === 0) {
       const { name, email, password } = user;
 
-      const existingUser = JSON.parse(localStorage.getItem('registeredUser'));
-      if (existingUser && existingUser.email === email) {
-        setErrors({ email: 'Account already registered. Please login.' });
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      const userExists = users.some(u => u.email === email);
+
+      if (userExists) {
+        setErrors({ email: 'Account already exists. Please log in.' });
         return;
       }
 
-      localStorage.setItem('registeredUser', JSON.stringify({ name, email, password }));
+      const newUser = { name, email, password };
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
+
       navigate('/Login');
     } else {
       setErrors(validationErrors);
@@ -67,8 +72,8 @@ export default function Register() {
   return (
     <div className="auth-wrapper centered">
       <Helmet>
-              <title>Register Page/Grocery Store</title>
-            </Helmet>
+        <title>Register Page / Grocery Store</title>
+      </Helmet>
       <h2 className="text-center mt-3">Customer Registration</h2>
       <div className="form-area">
         <label>Full Name</label>
@@ -130,7 +135,10 @@ export default function Register() {
       <div className="form-side-info">
         <h4>Log In</h4>
         <p>If you already have an account, Login here</p>
-        <button className="btn btn-success btn-narrow" onClick={() => navigate('/Login')}>
+        <button
+          className="btn btn-success btn-narrow"
+          onClick={() => navigate('/Login')}
+        >
           Log In
         </button>
       </div>

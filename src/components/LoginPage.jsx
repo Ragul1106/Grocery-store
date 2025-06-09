@@ -14,31 +14,32 @@ export default function Login() {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
- const handleLogin = () => {
-  const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+  const handleLogin = () => {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
-  if (
-    storedUser &&
-    storedUser.email === loginData.email &&
-    storedUser.password === loginData.password
-  ) {
-    localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
-    toast.success('Login successful');
-    setTimeout(() => {
-      navigate('/');
-      window.location.reload();
-    }, 1500);
-  } else {
-    toast.error('Enter your details correctly');
-  }
-};
+    const matchedUser = users.find(
+      user =>
+        user.email === loginData.email &&
+        user.password === loginData.password
+    );
 
+    if (matchedUser) {
+      localStorage.setItem('loggedInUser', matchedUser.email);
+      toast.success('Login successful');
+      setTimeout(() => {
+        navigate('/');
+        window.location.reload();
+      }, 1500);
+    } else {
+      toast.error('Enter your details correctly');
+    }
+  };
 
   return (
     <div className="auth-wrapper centered">
       <Helmet>
-              <title>Login/Grocery Store</title>
-            </Helmet>
+        <title>Login / Grocery Store</title>
+      </Helmet>
       <h2 className="text-center mt-3">Customer Log In</h2>
       <div className="form-area">
         <label>Email Address</label>
