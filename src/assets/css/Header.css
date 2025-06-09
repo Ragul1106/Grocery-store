@@ -9,8 +9,13 @@
 .top-banner {
     background-color: #4EB528;
     color: white;
-    padding: 8px 0;
+    padding: 1px 0;
     text-align: center;
+}
+
+.top-text{
+  font-size: 24px;
+  padding-top: 10px;
 }
 
 .banner-text {
@@ -206,7 +211,6 @@
     display: flex;
     justify-content: center;
   }
-
 
   .logo-img {
      width: 80%;
