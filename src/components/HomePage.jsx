@@ -294,7 +294,7 @@ const HomePage = () => {
                 {Object.keys(data).map((tab) => (
                   <button
                     key={tab}
-                    className={`me-4 tab-btn ${activeTab === tab ? "active-tab" : ""
+                    className={` tab-btn ${activeTab === tab ? "active-tab" : ""
                       }`}
                     onClick={() => setActiveTab(tab)}
                   >
@@ -328,9 +328,9 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 text-stra text-lg-start mt-5 px-3">
+            <div className="col-lg-6 text-stra text-lg-start mt-5">
               <h3 className="fs-1 fw-bold ms-lg-5">
-                Get <span className=" fw-bold" style={{ color: "orange" }}>20% Discount</span>{" "}
+                Get <span className=" fw-bold" style={{ color: "#FF7C08" }}>20% Discount</span>{" "}
                 on
                 <br /> Your First Sale
               </h3>
@@ -339,7 +339,7 @@ const HomePage = () => {
                 <br />
                 enjoy a 20% discount on your first order.
               </p>
-              <div className="d-flex flex-column flex-sm-row flex-wrap justify-content-center align-items-center gap-3 mt-4">
+              <div className="d-flex flex-column flex-sm-row flex-wrap justify-content-center align-items-center gap-3 mt-5">
                 {["45K+", "120K+", "300+"].map((text, idx) => (
                   <div
                     key={idx}

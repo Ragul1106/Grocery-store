@@ -195,13 +195,15 @@
 .tab-btn {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  border-radius: 2px;
+  font-size: 1.0rem;
   color: #333;
   font-weight: 500;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-.active-tab {
+.tab-btn.active-tab {
   color: orange;
   border-bottom: 2px solid orange;
 }
